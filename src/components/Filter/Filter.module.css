@@ -1,0 +1,17 @@
+.filterWrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.filterWrapper > * {
+  width: 140px;
+}
+
+@media (max-width: 840px) {
+  .filterWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

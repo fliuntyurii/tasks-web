@@ -1,0 +1,75 @@
+.wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  box-shadow: 1px 1px 30px rgb(155, 255, 230);
+  border-radius: 20px;
+}
+
+@media (min-width: 650px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 90%;
+  }
+}
+
+.wrapper.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.column {
+  display: flex;
+  align-items: center;
+}
+
+.column span {
+  margin-right: 10px;
+  color: rgb(0, 128, 96);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.column h3, .column p {
+  font-size: 16px;
+  color: rgb(76, 75, 75);
+}
+
+.singleTask {
+  border-radius: 20px;
+  border: 1px solid rgb(0, 128, 96);
+  padding: 5px 10px;
+  max-width: 200px;
+  margin: 10px 15px;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  background-color: rgb(155, 255, 230);
+}
+
+.editTask {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid rgb(0, 128, 96);
+  border-radius: 15px;
+  color: rgb(0, 128, 96);
+  cursor: pointer;
+}
